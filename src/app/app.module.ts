@@ -9,6 +9,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { RecomendedComponent } from './recomended/recomended.component';
 import { AuthorComponent } from './author/author.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     DashboardComponent,
     FavoriteComponent,
     RecomendedComponent,
-    AuthorComponent
+    AuthorComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
