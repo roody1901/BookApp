@@ -1,11 +1,12 @@
 <app-header></app-header>
 <div class="row md-10 ">
-    <div class="column md-10">
-        <div class="card" style="width: 18rem;">
+    <div class="column md-10" >
+        <div class="card" style="width: 18rem;" *ngFor="let nd of book">
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Book Name</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title">{{nd.volumeInfo.title}}</h5>
+              <p class="card-text">{{nd.volumeInfo.subtitle}}</p>
+              <h5 class="card-title">{{nd.volumeInfo.authors}}</h5>
               <a href="#" class="btn btn-primary">Add to favorite</a>
             </div>
         </div>
