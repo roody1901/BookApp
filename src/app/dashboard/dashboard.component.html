@@ -1,15 +1,19 @@
 <app-header></app-header>
-<div class="row md-10 ">
-    <div class="column md-10" >
-        <div class="card" style="width: 18rem;" *ngFor="let nd of book">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">{{nd.volumeInfo.title}}</h5>
-              <p class="card-text">{{nd.volumeInfo.subtitle}}</p>
-              <h5 class="card-title">{{nd.volumeInfo.authors}}</h5>
-              <a href="#" class="btn btn-primary">Add to favorite</a>
-            </div>
+
+
+
+  <div class="container-fluid mt-4">
+    <div class="row mt-4">
+        <div *ngFor="let nd of book" class="col-lg-3 mt-3 mb-3" >
+            <div class="card" style="width: 25rem">
+                <img src="{{nd.image_url}}" alt="!img" width="60%">
+                <div class="card-body">
+                    <h5 class="card-title">{{nd.title}}</h5>
+                    <p class="card-text">{{nd.description| slice:0:200}}</p>
+                    <h5 class="card-title">{{nd.authors}}</h5>
+                    <a href="#" class="btn btn-primary" (click)="AddFav(nd)">Add to favorite</a>
+                </div>
+            </div>            
         </div>
     </div>
 </div>
-

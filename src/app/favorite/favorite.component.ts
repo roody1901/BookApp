@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookdataService } from '../bookdata.service';
 
 @Component({
   selector: 'app-favorite',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoriteComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private bookapi:BookdataService) { }
+  FavList:any=[];
   ngOnInit(): void {
+   this.bookapi.getFav().subscribe(result=>{
+    this.FavList=result;
+   })
   }
 
 }

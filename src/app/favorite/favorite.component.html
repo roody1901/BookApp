@@ -1,1 +1,19 @@
-<p>favorite works!</p>
+<app-header></app-header>
+
+
+
+  <div class="container-fluid mt-4">
+    <div class="row mt-4">
+        <div *ngFor="let nd of FavList" class="col-lg-3 mt-3 mb-3" >
+            <div class="card" style="width: 25rem">
+                <img src="{{nd.image_url}}" alt="!img" width="60%">
+                <div class="card-body">
+                    <h5 class="card-title">{{nd.title}}</h5>
+                    <p class="card-text">{{nd.description| slice:0:200}}</p>
+                    <h5 class="card-title">{{nd.authors}}</h5>
+                   
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>
