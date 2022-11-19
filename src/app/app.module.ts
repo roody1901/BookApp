@@ -10,6 +10,8 @@ import { RecomendedComponent } from './recomended/recomended.component';
 import { AuthorComponent } from './author/author.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { HeaderComponent } from './header/header.component';
     FavoriteComponent,
     RecomendedComponent,
     AuthorComponent,
-    HeaderComponent
+    HeaderComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

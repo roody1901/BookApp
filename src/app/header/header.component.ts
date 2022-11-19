@@ -8,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
-
+  userName:any=''
   ngOnInit(): void {
+    this.userName=localStorage.getItem('user');
+    
+  }
+
+  LogOut(){
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
   }
 
 }

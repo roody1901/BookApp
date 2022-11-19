@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>SignUp</h1>
+                    <h6>Register YourSelf</h6>
+                </div>
+               <form >
+                <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                    <div class="container-fluid">                    
+                            <div class="form-group">
+                                <label for="exampleInputFirstName">First Name</label>
+                                <input formControlName="fullName" type="text" class="form-control" id="firstname"  placeholder="Enter first name" required >
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputLastName">Last Name</label>
+                                <input formControlName="LastName" type="text" class="form-control" id="lastname"  placeholder="Enter last name" required >
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputCity">City</label>
+                                <input formControlName="city" type="text" class="form-control" id="city"  placeholder="Enter your city details" required >
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputAge"> Age</label>
+                                <input formControlName="age" type="number" class="form-control" id="age"  placeholder="Enter fyour age" required >
+                            </div>
+                            
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Email address</label>
+                              <input formControlName="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required >
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Password</label>
+                              <input formControlName="password" type="password" class="form-control" id="password" placeholder="Password" required >
+                            </div>
+                            <button type="submit" class="btn btn-primary">SignUp</button>                      
+                    </div>
+                </form>
+               </form>
+                <a href="/login">Already have account?Click to Login</a>
+            </div>
+        </div>
+    </div>
+</div>
