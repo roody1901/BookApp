@@ -10,15 +10,18 @@ import { HttpClient } from '@angular/common/http';
 export class SearchComponent implements OnInit {
 
   searchD:any=''
+  SearchBook:any=[]
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
-   
+
   }
   getValue(val:string){
     this.searchD=val;
     console.log(this.searchD);
-    this.http.get(`https://www.googleapis.com/books/v1/volumes?q=${this.searchD}`)
+    this.http.get(`https://www.googleapis.com/books/v1/volumes?q=${this.searchD}`).subscribe((result:any)=>{
+     this.SearchBook= result.items;
+    })
   }
 
 }

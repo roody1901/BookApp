@@ -3,17 +3,21 @@ import { HttpClient } from '@angular/common/http';
 import {Observable} from 'rxjs';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class BookdataService {
 
-  constructor(private http:HttpClient) { }
-
+  constructor(private http:HttpClient) { }  
   
   Recomendbooks='https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyCeEYbG9HvMfUvTYx35R7Fh5vm-Kh3yRRY'
  
   booksApi:any='https://example-data.draftbit.com/books?_limit=50'
+
+  // getVal():Observable<any>{
+  //   return this.http.get(`https://www.googleapis.com/books/v1/volumes?q=${this.seavh}`)
+  // }
   getBook():Observable<any>{
     console.log(this.booksApi);
     return this.http.get(this.booksApi);
