@@ -6,6 +6,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { LoginComponent } from './login/login.component';
 import { RecomendedComponent } from './recomended/recomended.component';
 import { RegisterComponent } from './register/register.component';
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   {path:'dashboard',component:DashboardComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:'author',component:AuthorComponent},
   {path:'register',component:RegisterComponent},
   {path:'',component:LoginComponent},
-  {path:'login',component:LoginComponent}
+  {path:'login',component:LoginComponent},
+  {path:'search',component:SearchComponent}
 
 ];
 
