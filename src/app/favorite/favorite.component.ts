@@ -11,9 +11,10 @@ export class FavoriteComponent implements OnInit {
   constructor(private bookapi:BookdataService) { }
   FavList:any=[];
   ngOnInit(): void {
-   this.bookapi.getFav().subscribe(result=>{
+   this.bookapi.getFav().subscribe((result:any)=>{
     this.FavList=result;
    })
+
   }
 
 }

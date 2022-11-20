@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { getConstantValue } from 'typescript';
 import { HttpClient } from '@angular/common/http';
+import { BookdataService } from '../bookdata.service';
 
 @Component({
   selector: 'app-search',
@@ -11,7 +12,7 @@ export class SearchComponent implements OnInit {
 
   searchD:any=''
   SearchBook:any=[]
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private books:BookdataService) { }
 
   ngOnInit(): void {
 
@@ -24,4 +25,9 @@ export class SearchComponent implements OnInit {
     })
   }
 
+  AddFav(favb:any){
+    this.books.addFav(favb).subscribe(result=>{
+     console.log(result);
+   })
+ }
 }
