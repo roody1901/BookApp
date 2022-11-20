@@ -1,1 +1,15 @@
-<p>recomended works!</p>
+<app-header></app-header>
+<div class="container-fluid mt-4">
+    <div class="row mt-2">
+        <div *ngFor="let nd of booklist" class="col-lg-3 mt-3 mb-3" >
+            <div class="card" style="width: 25rem">
+                <img src="{{nd.volumeInfo.imageLinks.smallThumbnail}}" alt="!img" width="60%">
+                <div class="card-body">
+                    <h5 class="card-title">{{nd.volumeInfo.title}}</h5>
+                    <p class="card-text">{{nd.volumeInfo.subtitle}}</p>
+                    <h5 class="card-title">{{nd.volumeInfo.authors[0]}}</h5>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>
