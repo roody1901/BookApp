@@ -1,14 +1,13 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col">
             <div class="card">
                 <div class="text-center">
                     <h1>Login</h1>
                     <h6>Please enter your email and password</h6>
                 </div>
                 <form [formGroup]="loginForm" (ngSubmit)="LogIn()">
-                    <div class="container-fluid">
-                       
+                    <div class="container-fluid">                       
                             <div class="form-group">
                               <label for="exampleInputEmail1">Email address</label>
                               <input  formControlName="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required >
@@ -17,8 +16,7 @@
                               <label for="exampleInputPassword1">Password</label>
                               <input formControlName="password" type="password" class="form-control" id="password" placeholder="Password" required >
                             </div>
-                            <button type="submit" class="btn btn-primary">Login</button>
-                        
+                            <button type="submit" class="btn btn-primary">Login</button>                        
                     </div>
                 </form>
                 <a href="/register">New User?Click to SignUp</a>

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
 import { RecomendedComponent } from './recomended.component';
 
 describe('RecomendedComponent', () => {
@@ -8,7 +8,8 @@ describe('RecomendedComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RecomendedComponent ]
+      declarations: [ RecomendedComponent ],
+      imports:[HttpClientModule]
     })
     .compileComponents();
 
