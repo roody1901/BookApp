@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { BookdataService } from '../bookdata.service';
 
 @Component({
   selector: 'app-author',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:HttpClient,private bokdata:BookdataService) { }
 
+  AuthorList:any=[];
   ngOnInit(): void {
+    this.bokdata.getRecomend().subscribe((res:any)=>{
+      console.log(res.items);
+      this.AuthorList=res.items;
+    })
+
   }
 
 }
