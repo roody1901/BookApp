@@ -27,14 +27,14 @@ A registered user should be able to login to the system
 ## Non-functional requirements
 - App should be responsive to display consistently across multiple device screens.  
 
-## Mandatory Specifications for Building Assignment Solution
+## Specifications of Assignment
 
 * Angular as front end
 * Authentication to be done using JWT Authentication
-* End to end test cases [e2e] are compulsory
-* Unit testing for front end is compulsory
+* End to end test cases [e2e] are done
+* Unit testing for front end is done
 
-## Tools and Technologies to be used
+## Tools and Technologies used
 - VCS        :  Gitlab
 - BackEnd :  JSON Server
 - FrondEnd  :  Angular
